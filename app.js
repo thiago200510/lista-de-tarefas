@@ -72,5 +72,28 @@ taskInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') addTask();
 });
 
+// Botão Limpar Concluídas
+const clearDoneBtn = document.getElementById('clearDoneBtn');
+
+function updateClearBtn() {
+  const hasDone = tasks.some(t => t.done);
+  clearDoneBtn.style.display = hasDone ? 'block' : 'none';
+}
+
+clearDoneBtn.addEventListener('click', () => {
+  tasks = tasks.filter(t => !t.done);
+  saveTasks();
+  renderTasks();
+  updateClearBtn();
+});
+
+// Sobrescreve renderTasks para também atualizar o botão
+const _originalRender = renderTasks;
+function renderTasks() {
+  _originalRender();
+  updateClearBtn();
+}
+
 // Inicializa a renderização
 renderTasks();
+updateClearBtn();
