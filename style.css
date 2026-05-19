@@ -108,6 +108,25 @@ h1 {
   color: #e53e3e;
 }
 
+.clear-btn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  background: #fff5f5;
+  border: 2px solid #fc8181;
+  border-radius: 8px;
+  color: #e53e3e;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-btn:hover {
+  background: #e53e3e;
+  color: #fff;
+}
+
 .footer {
   margin-top: 20px;
   text-align: center;
