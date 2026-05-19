@@ -13,6 +13,11 @@
       <input type="text" id="taskInput" placeholder="Digite uma nova tarefa..." />
       <button id="addBtn">Adicionar</button>
     </div>
+    <div class="filter-area">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="pending">Pendentes</button>
+      <button class="filter-btn" data-filter="done">Concluídas</button>
+    </div>
     <ul id="taskList"></ul>
     <div class="footer" id="taskCount">Nenhuma tarefa cadastrada.</div>
     <button id="clearDoneBtn" class="clear-btn" style="display:none;">Limpar Concluídas</button>
