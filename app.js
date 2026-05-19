@@ -23,7 +23,13 @@ function updateCount() {
 
 function renderTasks() {
   taskList.innerHTML = '';
-  tasks.forEach((task, index) => {
+  const filtered = tasks.filter(t => {
+    if (currentFilter === 'pending') return !t.done;
+    if (currentFilter === 'done') return t.done;
+    return true;
+  });
+  filtered.forEach((task) => {
+    const index = tasks.indexOf(task);
     const li = document.createElement('li');
     if (task.done) li.classList.add('done');
 
@@ -66,6 +72,19 @@ function deleteTask(index) {
   saveTasks();
   renderTasks();
 }
+
+// Filtro de tarefas
+let currentFilter = 'all';
+const filterBtns = document.querySelectorAll('.filter-btn');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderTasks();
+  });
+});
 
 addBtn.addEventListener('click', addTask);
 taskInput.addEventListener('keydown', (e) => {
