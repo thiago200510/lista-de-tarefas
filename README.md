@@ -1,6 +1,6 @@
-# 📝 Lista de Tarefas
+#  Lista de Tarefas
 
-Projeto desenvolvido como atividade prática da disciplina de **Desenvolvimento de Sistemas**, com o objetivo de aplicar os conceitos de versionamento de código utilizando **Git** e **GitHub**.
+Projeto desenvolvido como atividade prática da disciplina de Desenvolvimento de Sistemas, com o objetivo de aplicar os conceitos de versionamento de código utilizando Git e GitHub.
 
 ## Objetivo
 
@@ -51,6 +51,4 @@ lista-de-tarefas/
 - Criação e resolução de issues com referência nos commits
 - Pull Request para integração das alterações ao branch principal
 
-## Autor
 
-**thiago200510** — Atividade Prática de Git e GitHub
