@@ -143,3 +143,28 @@ h1 {
   font-size: 0.875rem;
   color: #718096;
 }
+
+.clear-btn {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ed8936;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.clear-btn:hover {
+  background: #dd6b20;
+  transform: translateY(-1px);
+}
+
+.clear-btn:focus {
+  outline: 3px solid rgba(237, 137, 54, 0.35);
+  outline-offset: 2px;
+}

@@ -15,6 +15,7 @@ Criar um miniprojeto web simples que demonstre o uso de boas práticas de versio
 | Remover tarefa | Botão "✕" ao lado de cada tarefa para removê-la da lista |
 | Persistência de dados | As tarefas são salvas no `localStorage` do navegador |
 | Contador de tarefas | Exibe quantas tarefas foram concluídas do total cadastrado |
+| Limpar concluídas | Remove tarefas concluídas com confirmação e texto dinâmico no botão |
 
 ## Tecnologias Utilizadas
 
