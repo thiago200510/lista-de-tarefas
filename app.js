@@ -95,11 +95,21 @@ taskInput.addEventListener('keydown', (e) => {
 const clearDoneBtn = document.getElementById('clearDoneBtn');
 
 function updateClearBtn() {
-  const hasDone = tasks.some(t => t.done);
+  const doneCount = tasks.filter(t => t.done).length;
+  const hasDone = doneCount > 0;
+
   clearDoneBtn.style.display = hasDone ? 'block' : 'none';
+  clearDoneBtn.textContent = hasDone
+    ? `Limpar ${doneCount} tarefa(s) concluída(s)`
+    : 'Limpar concluídas';
 }
 
 clearDoneBtn.addEventListener('click', () => {
+  const doneCount = tasks.filter(t => t.done).length;
+  const shouldClear = confirm(`Deseja remover ${doneCount} tarefa(s) concluída(s)?`);
+
+  if (!shouldClear) return;
+
   tasks = tasks.filter(t => !t.done);
   saveTasks();
   renderTasks();
